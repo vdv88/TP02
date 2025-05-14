@@ -1,0 +1,42 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #100d3e;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+.link-seleccionado {
+    font-weight: bold;
+    text-decoration: underline;
+}
