@@ -1,54 +1,86 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './Navbar.css'
 
 const Navbar = () => {
-    const isActiveCallback = ({isActive}) => {
-        if(isActive){
-            return 'link link-seleccionado'
-        }
-        else{
-            return 'link'
-        }
-    }
+    const isActiveCallback = ({ isActive }) => isActive ? 'link link-seleccionado' : 'link';
+
   return (
-    <header>
-        <h2>Sistema de seguimiento de Obras</h2>
-        <nav>
-            {/* 
-                Esto seria una mala practica
-                    <a href="/">Inicio con ancla</a>
-                    <br /> 
-            */}
-            {/* <Link to={'/'}>Inicio</Link>
-            <Link to={'/contact'}>Contacto</Link> */}
+    <header className="navbar-header">
+        <h2 className="navbar-title">Sistema de Seguimiento de Obras</h2>
+        <nav className="navbar-nav">
             <NavLink
-                to={'/'}
-                className={
-                    isActiveCallback
-                }
+                to='/'
+                className={isActiveCallback}
             >
                 Inicio
             </NavLink>
             <NavLink
-                to={'/contact'}
-                className={
-                    isActiveCallback
-                }
+                to='/contact'
+                className={isActiveCallback}
             >
                 Contacto
+            </NavLink>
+            <NavLink
+                to='/login'
+                className={isActiveCallback}
+            >
+                Login
+            </NavLink>
+            <NavLink
+                to='/registro'
+                className={isActiveCallback}
+            >
+                Registro
             </NavLink>
         </nav>
     </header>
   )
 }
 
-/* 
-El elemento ancla o a le indica al navegar que debe hacer una nueva solcitud GET a otra direccion
-
-osea cuando hacer <a href='/contact'>Contacto</a>
-
-Le estoy dando la orden al nevegador de que cuando el usuario de click sobre contacto se haga una solicitud GET a el recurso del servidor "/contact"
- */
-
 export default Navbar
+
+
+
+
+// import React from 'react'
+// import { NavLink } from 'react-router-dom'
+// import './Navbar.css'
+
+// const Navbar = () => {
+//     const isActiveCallback = ({ isActive }) => isActive ? 'link link-seleccionado' : 'link';
+
+//   return (
+//     <header className="navbar-header">
+//         <h2 className="navbar-title">Sistema de seguimiento de Obras</h2>
+//         <nav className="navbar-nav">
+//             <NavLink
+//                 to='/'
+//                 className={isActiveCallback}
+//             >
+//                 Inicio
+//             </NavLink>
+//             <NavLink
+//                 to='/contact'
+//                 className={isActiveCallback}
+//             >
+//                 Contacto
+//             </NavLink>
+//             <NavLink
+//                 to='/login'
+//                 className={isActiveCallback}
+//             >
+//                 Login
+//             </NavLink>
+//             <NavLink
+//                 to='/registro'
+//                 className={isActiveCallback}
+//             >
+//                 Registro
+//             </NavLink>
+//         </nav>
+//     </header>
+//   )
+// }
+
+// export default Navbar

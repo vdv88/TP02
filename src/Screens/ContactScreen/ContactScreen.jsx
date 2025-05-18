@@ -11,19 +11,19 @@ const ContactScreen = () => {
     EMAIL: 'email'
   }
 
-  /* Manejamos un formulario */
+ 
   const handleSubmitContactForm = (event) =>{
-    event.preventDefault()//Previene el comportamiento por defecto de un evento
-    event.target // Que es? El elemento que emito el evento
+    event.preventDefault()
+    event.target 
     console.dir(event.target.className)
-    //FormData
+   
     const contact_form_data = new FormData(event.target)
     const contact_form_values = {}
     for(let field in fields){
       contact_form_values[fields[field]] = contact_form_data.get(fields[field])
     }
     setFormValuesState(contact_form_values)
-   /*  console.log(contact_form_data.get(fields.NOMBRE_COMPLETO)) */
+   
   }
   console.log(form_values_state)
   return (

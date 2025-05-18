@@ -6,9 +6,9 @@
     padding: 40px;
   }
   
-  /* Extra opcional si querés diferenciar al admin visualmente */
+  /* Diferencia al admin  */
   .product-list-container.admin {
-    background-color: #e4e4e4; /* ejemplo visual */
+    background-color: #e4e4e4; 
     border: 2px dashed rgb(88, 88, 88);
   }
   

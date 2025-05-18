@@ -35,16 +35,10 @@ const ContactScreen = () => {
 
     console.log(form_values_state)
 
-    const [contador, setContador] = useState(0)
-    const incrementar = () =>{
-        setContador((prev) => prev + 1)
-        setContador((prev) => prev + 1)
-        setContador((prev) => prev + 1)
-    }
+  
     return (
         <div>
-            <span>{contador}</span>
-            <button onClick={incrementar}>Incrementar</button>
+          
             <Navbar />
             <h1>Contactanos</h1>
             <form onSubmit={handleSubmitContactForm} className='form'>

@@ -24,20 +24,37 @@ const ProductCard = ({img, nombre, monto_convenio, localidad, estado, fecha_inic
         boton = <button onClick={handleClickBuyButton}>Iniciar Tramitación</button>
     }
 
+    
     return (
-        <div className="product-info">
-            <img src={img} alt={nombre} className="product-img" />
-            <h3>{nombre}</h3>
-            <div className="product-details">
-                <span>{localidad}</span>
-                <span>{estado}</span>
-                <span>{fecha_inicio}</span>
-            </div>
-            <span>${monto_convenio}</span>
-            {boton}
-            <Link to= {`/product/${id}`}>Ver detalle</Link>
-        </div>
-    )
+  <div className="product-info">
+    <img src={img} alt={nombre} className="product-img" />
+    <h3>{nombre}</h3>
+
+    <div className="product-details">
+      <p><strong>Localidad:</strong> {localidad}</p>
+      <p><strong>Fecha de Inicio:</strong> {fecha_inicio}</p>
+      <p><strong>Estado:</strong> {estado}</p>
+      <p><strong>Monto Convenio:</strong> ${monto_convenio}</p>
+    </div>
+
+    {boton}
+    <Link to={`/product/${id}`}>Ver detalle</Link>
+  </div>
+)
+    // return (
+    //     <div className="product-info">
+    //         <img src={img} alt={nombre} className="product-img" />
+    //         <h3>{nombre}</h3>
+    //         <div className="product-details">
+    //             <span>{localidad}</span>
+    //             <span>{estado}</span>
+    //             <span>{fecha_inicio}</span>
+    //         </div>
+    //         <span>${monto_convenio}</span>
+    //         {boton}
+    //         <Link to= {`/product/${id}`}>Ver detalle</Link>
+    //     </div>
+    // )
 
 
 

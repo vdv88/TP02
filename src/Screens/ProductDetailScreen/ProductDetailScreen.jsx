@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { getProductById } from '../../services/product'
 import Navbar from '../../Components/Navbar/Navbar'
+import './ProductDetailScreen.css'
+
 
 const ProductDetailScreen = () => {
     const [product, setProduct] = useState(null)
@@ -45,10 +47,23 @@ const ProductDetailScreen = () => {
         content = <div>No encontrado</div>
     }
     else{
-        content = <div>
-            Producto: {product.title}
-        </div>
-    }
+        content = (
+      <div className="product-detail-container">
+        <h1>{product.title}</h1>
+        <p><strong>Localidad:</strong> {product.localidad}</p>
+        <p><strong>Fecha de Inicio:</strong> {product.fecha_inicio}</p>
+        <p><strong>Estado:</strong> {product.estado}</p>
+        <p><strong>Monto Convenio:</strong> ${product.monto_convenio?.toLocaleString()}</p>
+
+        <hr />
+
+        <p><strong>Descripción de la obra:</strong> {product.descripcion}</p>
+        <p><strong>Esquema de desembolsos:</strong> {product.esquema_desembolsos}</p>
+        <p><strong>Entidad:</strong> {product.entidad}</p>
+      </div>
+    )
+  }
+
   return (
     <div>
         <Navbar/>
