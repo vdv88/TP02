@@ -35,7 +35,7 @@ const Navbar = () => {
             </NavLink>
 
             <Link to ={ '/obra/new' }>
-             Crear Certificado
+             Crear Obra
             </Link>
 
 
