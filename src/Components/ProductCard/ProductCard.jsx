@@ -32,9 +32,9 @@ const ProductCard = ({img, nombre, monto_convenio, localidad, estado, fecha_inic
 
     <div className="product-details">
       <p><strong>Localidad:</strong> {localidad}</p>
-      <p><strong>Fecha de Inicio:</strong> {fecha_inicio}</p>
+      <p><strong>Fecha de Inicio:</strong> {fecha_inicio?.toDate().toLocaleDateString()}</p>
       <p><strong>Estado:</strong> {estado}</p>
-      <p><strong>Monto Convenio:</strong> ${monto_convenio}</p>
+      <p><strong>Monto Convenio:</strong> ${monto_convenio.toLocaleString('es-AR')}</p>
     </div>
 
     {boton}

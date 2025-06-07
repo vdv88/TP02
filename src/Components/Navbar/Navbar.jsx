@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import './Navbar.css'
 
 const Navbar = () => {
@@ -33,6 +33,13 @@ const Navbar = () => {
             >
                 Registro
             </NavLink>
+
+            <Link to ={ '/obra/new' }>
+             Crear Certificado
+            </Link>
+
+
+
         </nav>
     </header>
   )

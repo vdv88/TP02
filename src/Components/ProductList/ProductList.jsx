@@ -64,7 +64,7 @@ const ProductList = () => {
             return <ProductCard
                 {...product}
                 key={product.id}
-                title={'hola'}
+                title={product.title}
                 is_admin={isAdmin}
             />
         }

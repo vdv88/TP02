@@ -5,6 +5,7 @@ import ProductDetailScreen from './Screens/ProductDetailScreen/ProductDetailScre
 import ContactScreen from './Screens/ContactScreen/ContactScreenControlada'
 import RegistroScreen from './Screens/RegistroScreen/RegistroScreen'
 import LoginScreen from './Screens/LoginScreen/LoginScreen'
+import CreateObraScreen from './Screens/CreateObraScreen/CreateObraScreen'
 import './App.css'
 
 
@@ -39,16 +40,17 @@ const App = () => {
         ) : (
         
           <>
-            <Route path="/" element={<HomeScreen />} />
-            <Route path="/contact" element={<ContactScreen />} />
-            <Route path="/product/:product_id" element={<ProductDetailScreen />} />
-            <Route path="/login" element={<LoginScreen />} />
-            <Route path="/registro" element={<RegistroScreen />} />
-          </>
-        )}
-      </Routes>
-    </div>
-  )
+          <Route path="/" element={<HomeScreen />} />
+          <Route path="/contact" element={<ContactScreen />} />
+          <Route path="/product/:product_id" element={<ProductDetailScreen />} />
+          <Route path="/login" element={<LoginScreen />} />
+          <Route path="/registro" element={<RegistroScreen />} />
+          <Route path="/obra/new" element={<CreateObraScreen />} />  
+        </>
+      )}
+    </Routes>
+  </div>
+);
 }
 
 export default App
